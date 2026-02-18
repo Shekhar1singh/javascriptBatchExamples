@@ -179,6 +179,12 @@
 // console.log(counter.getValue());
 // console.log(count);
 
+// let a = "10";
+// let b = "20";
+// console.log(a + b);
+// console.log(typeof a);
+// console.log(typeof b);
+
 // let j = "2" + "2";
 // console.log(j);
 // console.log(typeof j);
@@ -221,6 +227,8 @@
 // console.log(l);
 // l--;
 // console.log(l);
+// let result = l++ + ++l + l++;
+// console.log(result);
 
 // let s = prompt("enter the number");
 // s = Number.parseInt(s);
@@ -249,10 +257,25 @@
 // let price = 20;
 // let price = prompt("Enter Product Amount");
 // let convertedAmount = Number(price);
-// let isMember = false;
+// let isMember = true;
 // let discount = isMember ? 0.5 : 0;
 // let total = convertedAmount - convertedAmount * discount;
+// // let total = price - price * discount;
 // console.log("Total discounted price is" + total);
+
+// let price = prompt("Enter Price Amount");
+// let convert = Number(price);
+// let member = prompt("The member is subscribe ? Type : true or false");
+// let bool = Boolean(member);
+// if (member == "true") {
+//   let discount = 0.5;
+//   var total = convert - convert * discount;
+//   console.log("Total Discounted price is " + total);
+// } else if (member == "false") {
+//   let discount = 0;
+//   var total = convert - convert * discount;
+//   console.log("Total Discounted price is " + total);
+// }
 
 // let askNumber = prompt("Enter the Number");
 // let convertedNumber = Number(askNumber);
@@ -278,8 +301,10 @@
 //   console.log("Food is not available");
 // }
 
-// if (10 == 10) {
+// if (false) {
 //   console.log("print Me");
+// } else {
+//   console.log("go to heel");
 // }
 
 // let userAge = prompt("Enter Your Age");
@@ -348,6 +373,8 @@
 // } else {
 //   console.log("number is zero");
 // }
+
+// let day = new Date().getDay();
 
 // let marks = 70;
 // if (marks <= 100 && marks >= 90) {
@@ -515,7 +542,13 @@
 //     console.log("Invalid age");
 // }
 
+//print 0 to 4
 // for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+//reverse 5 to 1
+// for (let i = 5; i >= 1; i--) {
 //   console.log(i);
 // }
 
@@ -546,16 +579,45 @@
 // let n = prompt("enter the number");
 // n = Number.parseInt(n);
 // for (let i = 1; i <= n; i++) {
-//   // mul *= i;
-//   mul = mul * i;
+//    mul *= i;
+// //   mul = mul * i;
 // }
 // console.log("Factorial is " + mul);
 
 // let n = prompt("Enter the value of n");
 // n = Number.parseInt(n);
-// let i = 0;
-// while (i < n) {
+// let i = 10;
+// while (i > n) {
 //   console.log(i);
+//   i--;
+// }
+
+// let n = 1;
+// while (true) {
+//   if (n % 7 === 0) {
+//     console.log("First Numbers divisible by 7 is", n);
+//     break;
+//   }
+//   n++;
+// }
+
+// let start = 1;
+// let end = 50;
+
+// for (let i = start; i <= end; i++) {
+//   if (i % 7 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// let start = 1;
+// let end = 50;
+
+// let i = start;
+// while (i <= end) {
+//   if (i % 7 === 0) {
+//     console.log(i);
+//   }
 //   i++;
 // }
 
@@ -578,7 +640,7 @@
 // }
 // console.log(sum);
 
-// let n = 131;
+// let n = 325;
 // let a = n;
 // let b;
 // let temp = 0;
@@ -603,6 +665,8 @@
 //   i++;
 // } while (i < n);
 
+// for of examples........
+
 // const names = ["ramesh", "suresh", "mohan", "sohan"];
 // for (const items of names) {
 //   console.log(items);
@@ -613,6 +677,8 @@
 // for (const char of str) {
 //   console.log(char);
 // }
+
+//for of examples........
 
 // const person = {
 //   name: "Shekhar",
@@ -758,7 +824,7 @@
 // let greeting = `good moring ${Firstname} ! " to all of you"  'i hope everypne is good'`;
 // console.log(greeting);
 
-// let Name = 'shek"thar';
+// let Name = "shek\nthar";
 // console.log(Name);
 // console.log(Name.length);
 
@@ -917,15 +983,16 @@
 
 // let n = [10, 20, 30, 40, 50, 60];
 
-// n.filter((num) => {
-//   return num > 10;
-// });
-
 // let newItem = n.filter((num) => {
 //   return num > 10;
 // });
 
+// let nextIem = n.filter((item) => {
+//   return item == 10;
+// });
+
 // console.log(newItem);
+// console.log(nextIem);
 
 // const countries = [
 //   { id: 1, name: "India" },
@@ -1000,19 +1067,19 @@
 
 // console.log(newBooks);
 
-const mobileBrands = [
-  { brand: "Apple", price: 80000 },
-  { brand: "Samsung", price: 60000 },
-  { brand: "OnePlus", price: 45000 },
-  { brand: "Xiaomi", price: 25000 },
-  { brand: "Realme", price: 20000 },
-];
+// const mobileBrands = [
+//   { brand: "Apple", price: 80000 },
+//   { brand: "Samsung", price: 60000 },
+//   { brand: "OnePlus", price: 45000 },
+//   { brand: "Xiaomi", price: 25000 },
+//   { brand: "Realme", price: 20000 },
+// ];
 
-const totalAmount = mobileBrands.reduce((acc, item) => {
-  return acc + item.price;
-}, 0);
+// const totalAmount = mobileBrands.reduce((acc, item) => {
+//   return acc + item.price;
+// }, 0);
 
-console.log(totalAmount);
+// console.log(totalAmount);
 
 // let array1 = [1, 2, 3, 4, 5, 6];
 // let array2 = [52, 45, 85, 645, 2, 5];
@@ -1176,6 +1243,89 @@ console.log(totalAmount);
 // console.dir(FontAwesomeKitConfig);
 
 // console.log(users[1].name);
+
+//object destructuring .....ES6 new featurs
+// const color = ["red", "pink", "blue", "black"];
+
+// console.log(color[0]);
+// console.log(color[1]);
+// console.log(color[2]);
+// console.log(color[3]);
+
+// const [a, b, c, d] = color;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+// const [, , , d] = color;
+// console.log(d);
+
+//destracture array as an object ...
+// const { 3: c } = color;
+// console.log(c);
+
+// const user = {
+//   name: "shekhar",
+//   age: "30",
+//   email: "shekharsing@gmail.com",
+//   lastlogin: ["monday", "friday"],
+//   fullName: {
+//     userFullname: {
+//       firstName: "shekhar",
+//       lastName: "singh",
+//     },
+//   },
+// };
+
+// let userAge = user.age;
+// console.log(userAge);
+
+// const { name, age } = user;
+// console.log(name);
+// console.log(age);
+
+// here we can not use other variable, we have to use key nae only ...
+// if we want to store key value with different variable name then we have
+// to do this
+
+// const { name: username, age: userage } = user;
+// console.log(username);
+// console.log(userage);
+
+//multi level destructuring .....
+
+// const {
+//   fullName: { userFullname },
+// } = user;
+
+// console.log(userFullname);
+
+// const {
+//   fullName: {
+//     userFullname: { lastName },
+//   },
+// } = user;
+
+// console.log(lastName);
+
+// destructuring in function .....
+// function printobj(user) {
+//   console.log(user);
+// }
+// printobj(user);
+
+// function printobj({ name, age }) {
+//   console.log(name, age);
+// }
+// printobj(user);
+
+// function printobj(firstname) {
+//   console.log(firstname);
+// }
+// printobj(user.fullName.userFullname.firstName);
+
+// ............................
 
 // console.log("hello");
 // window.console.log("hello 2");
@@ -1774,3 +1924,19 @@ console.log(totalAmount);
 // }
 
 // getAllData();
+
+// local Storage
+
+// first we have to create key and value in localstorage
+localStorage.setItem("age", "30");
+localStorage.setItem("address", "lucknow");
+const nameElement = document.querySelector(".user-name");
+// nameElement.innerHTML = localStorage.myname;
+nameElement.innerHTML = localStorage.getItem("myname");
+const nameEmail = document.querySelector("#inp-email");
+nameEmail.addEventListener("input", (event) => {
+  localStorage.email = event.target.value;
+  const emailElement = document.querySelector(".user-email");
+  // emailElement.innerHTML = localStorage.email;
+  emailElement.innerHTML = localStorage.getItem("email");
+});
